@@ -1,0 +1,78 @@
+.Form__group {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 10%;
+}
+
+.Qr-Container {
+  height: 420px;
+  width: 280px;
+  margin: 5px;
+
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: -10px;
+  background: rgba(255, 255, 255, 0.456);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: -0.1rem 0.5rem 0.5rem 0.5rem rgba(194, 182, 182, 0.114);
+  outline: 2px solid #35baea;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+border:none;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.QrCode {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  height: 250px;
+  background: #2b7dfa;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gen-btn {
+  box-shadow: 0 0.2rem 0.2rem 0.2rem rgba(152, 149, 149, 0.5);
+  margin: 2.5px;
+  background: linear-gradient(
+    to right top,
+    #006bff,
+    #0078fb,
+    #1c84f5,
+    #398fee,
+    #5399e5
+  );
+  /* background:transparent; */
+  backdrop-filter: blur(10px);
+ 
+  /* -webkit-backdrop-filter:  blur(10px); */
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.gen-btn:focus {
+  transform: scale(1);
+  box-shadow: none;
+  outline: none;
+}
+
+.form__CL {
+  margin-top: 15%;
+}

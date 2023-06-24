@@ -1,0 +1,97 @@
+div .container {
+  width: 350px;
+  height: fit-content;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.484);
+  border-color: 1px solid rgba(151, 193, 244, 0.351);
+  opacity: 1;
+  backdrop-filter: blur(9.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid #35baea;
+}
+
+.form__cont {
+  margin: 6px;
+}
+
+.text__inp {
+  padding: 6.9px;
+  margin: 5px;
+  border-radius: 5.5px;
+  border: none;
+  outline: 2px solid #35baea;
+ width: 210px;
+ height:25px;
+ font-size:medium;
+ font-weight:600;
+ background: rgba(255, 255, 255, 0.363);
+ backdrop-filter: blur(5px);
+}
+
+.inp__Link{
+  margin: 6%;
+  padding:4%;
+}
+
+.inp__img{
+  margin: 6%;
+  padding:4%;
+}
+
+.file__inp {
+  padding: 5px;
+  border-radius: 5.5px;
+  font-weight:600;
+  font-size:15px;
+  margin: 5px;
+  height:25px;
+  width: 210px;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.363);
+  backdrop-filter: blur(5px);
+  border: none;
+  outline: 2px solid #35baea;
+}
+
+.qr__color{
+  margin: 6%;
+  padding:4%;
+}
+
+
+.color__inp{
+  margin-top: 5px;
+  height:31px;
+  width: 210px;
+  border-radius: 5.5px;
+  border:none;
+  outline: 2px solid #35baea;
+  background:rgba(151, 193, 244, 0.351);
+}
+
+.btn__submit {
+  background: rgba(203, 86, 246, 0.921);
+  width: 150px;
+  height: 40px;
+  border-radius: 9px;
+  outline: none;
+  border:none;
+  /* border: 0.2rem solid  rgba(143, 177, 236, 0.921); */
+  box-shadow: 2px 2px 2px 0.5px rgba(92, 92, 92, 0.196);
+  position: sticky;
+  transition: 0.1s ease-in;
+  font-weight:600;
+  margin-top:-10px;
+  margin-left:20%;;
+}
+
+.btn__submit:focus {
+  transform:scale(1);
+  transition: 0.1s ease-in;
+  box-shadow: 0.3rem 0.3rem 0.3rem 1.4px  rgb(141, 110, 236);
+  /* border: 0.2rem solid rgb(141, 110, 236); */
+  background: rgba(207, 209, 210, 0.263);
+  backdrop-filter: blur(9.5px);
+}
