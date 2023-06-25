@@ -2,40 +2,12 @@ import "./QrOCode.css";
 import { QRCodeCanvas } from "qrcode.react";
 import { motion } from "framer-motion";
 import Form from "../Form/Form";
+import { boxVariants } from "../BoxVariants/BoxVariants";
 const QrCode = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
   };
 
-  const boxVariants = {
-    qrBoxVariant: {
-      hidden: {
-        x: "-100vw",
-      },
-      visible: {
-        x: 0,
-        transition: {
-          type: "spring",
-          stiffness: 75,
-          delay: 0.4,
-        },
-      },
-    },
-
-    FormBoxVariant: {
-      FormHidden: {
-        x: "100vw",
-      },
-      FormVisible: {
-        x: 0,
-        transition: {
-          type: "spring",
-          stiffness: 75,
-          delay: 0.1,
-        },
-      },
-    },
-  };
   return (
     <div className="Form__group">
       <motion.form
