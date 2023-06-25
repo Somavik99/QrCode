@@ -1,5 +1,6 @@
 import "./QrOCode.css";
 import { QRCodeCanvas } from "qrcode.react";
+import { motion } from "framer-motion";
 import Form from "../Form/Form";
 const QrCode = () => {
   const HandleSubmit = (e) => {
@@ -11,7 +12,11 @@ const QrCode = () => {
       <form className="Card" onSubmit={HandleSubmit}>
         <div className="Qr-Container">
           <div className="QrCode">
-            <QRCodeCanvas bgColor="#2b7dfa" fgColor="#ffffff" style={{width:"140px",height:"140px"}} />
+            <QRCodeCanvas
+              bgColor="#2b7dfa"
+              fgColor="#ffffff"
+              style={{ width: "140px", height: "140px" }}
+            />
           </div>
 
           <p
@@ -52,9 +57,9 @@ const QrCode = () => {
           </button>
         </div>
       </form>
-    <div className="form__CL">
-      <Form />
-      </div>
+      <motion.div className="form__CL">
+        <Form />
+      </motion.div>
     </div>
   );
 };
