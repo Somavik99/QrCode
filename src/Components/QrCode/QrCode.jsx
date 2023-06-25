@@ -7,9 +7,44 @@ const QrCode = () => {
     e.preventDefault();
   };
 
+  const boxVariants = {
+    qrBoxVariant: {
+      hidden: {
+        x: "-100vw",
+      },
+      visible: {
+        x: 0,
+        transition: {
+          type: "spring",
+          stiffness: 75,
+          delay: 0.4,
+        },
+      },
+    },
+
+    FormBoxVariant: {
+      FormHidden: {
+        x: "100vw",
+      },
+      FormVisible: {
+        x: 0,
+        transition: {
+          type: "spring",
+          stiffness: 75,
+          delay: 0.1,
+        },
+      },
+    },
+  };
   return (
     <div className="Form__group">
-      <form className="Card" onSubmit={HandleSubmit}>
+      <motion.form
+        variants={boxVariants.qrBoxVariant}
+        initial="hidden"
+        animate="visible"
+        className="Card"
+        onSubmit={HandleSubmit}
+      >
         <div className="Qr-Container">
           <div className="QrCode">
             <QRCodeCanvas
@@ -41,7 +76,8 @@ const QrCode = () => {
             Scan the QR code to visit Frontend Mentor and take your coding
             skills to the next level
           </p>
-          <button
+          <motion.button
+            whileTap={{ scale: 0.9 }}
             className="gen-btn"
             style={{
               textAlign: "center",
@@ -54,10 +90,15 @@ const QrCode = () => {
             }}
           >
             Generate QrCode
-          </button>
+          </motion.button>
         </div>
-      </form>
-      <motion.div className="form__CL">
+      </motion.form>
+      <motion.div
+        variants={boxVariants.FormBoxVariant}
+        initial="FormHidden"
+        animate="FormVisible"
+        className="form__CL"
+      >
         <Form />
       </motion.div>
     </div>

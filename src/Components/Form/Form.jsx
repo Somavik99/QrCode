@@ -1,4 +1,5 @@
 import "./Form.css";
+import { motion } from "framer-motion";
 
 const Form = () => {
   return (
@@ -22,7 +23,6 @@ const Form = () => {
               name="Link"
               placeholder="Provide Link..."
               className="text__inp"
-
             />
           </div>
           <div className="inp__img">
@@ -53,9 +53,13 @@ const Form = () => {
             <input type="color" name="File" className="color__inp" />
           </div>
           <div>
-            <button type="submit" className="btn__submit">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              type="submit"
+              className="btn__submit"
+            >
               Submit
-            </button>
+            </motion.button>
           </div>
         </form>
       </div>
