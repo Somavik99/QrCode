@@ -1,7 +1,24 @@
+import { useReducer } from "react";
 import "./Form.css";
 import { motion } from "framer-motion";
+import { Actions } from "../QrContext/Actions/Actions";
+import { InputReducer } from "../QrContext/Actions/Actions";
 
 const Form = () => {
+   const [InputState, InputDispatch] = useReducer(InputReducer, {
+    Link: "",
+    File: "",
+    Range: 0,
+  });
+
+  const HandleChangeInput = (e) => {
+    InputDispatch({
+      type: Actions.INPUT_TEXTS,
+      FieldName: e.target.name,
+      payload: e.target.value,
+    });
+  };
+
   return (
     <div>
       <div className="container">
@@ -19,10 +36,12 @@ const Form = () => {
               Link:
             </label>
             <input
+            value={InputState.Link}
               type="text"
               name="Link"
               placeholder="Provide Link..."
               className="text__inp"
+              onChange={HandleChangeInput}
             />
           </div>
           <div className="inp__img">
@@ -32,7 +51,13 @@ const Form = () => {
             >
               Logo:
             </label>
-            <input type="file" name="File" className="file__inp" />
+            <input
+            value={InputState.File}
+              type="file"
+              name="File"
+              className="file__inp"
+              onChange={HandleChangeInput}
+            />
           </div>
           <div className="inp__img">
             <label
@@ -41,17 +66,15 @@ const Form = () => {
             >
               Size:
             </label>
-            <input type="range" name="File" className="range__inp" />
+            <input
+            value={InputState.Range}
+              type="range"
+              name="Range"
+              className="range__inp"
+              onChange={HandleChangeInput}
+            />
           </div>
-          <div className="qr__color">
-            <label
-              htmlFor="Color"
-              style={{ fontWeight: "600", color: "GrayText" }}
-            >
-              Color:
-            </label>
-            <input type="color" name="File" className="color__inp" />
-          </div>
+
           <div>
             <motion.button
               whileTap={{ scale: 0.9 }}

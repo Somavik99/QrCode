@@ -20,6 +20,7 @@ const QrCode = () => {
         <div className="Qr-Container">
           <div className="QrCode">
             <QRCodeCanvas
+            value={InputState}
               bgColor="#2b7dfa"
               fgColor="#ffffff"
               style={{ width: "140px", height: "140px" }}
