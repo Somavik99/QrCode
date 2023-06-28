@@ -8,7 +8,6 @@ export const boxVariants = {
       transition: {
         type: "spring",
         stiffness: 75,
-
         delay: 0.4,
       },
     },
