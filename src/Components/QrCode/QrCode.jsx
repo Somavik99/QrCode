@@ -92,6 +92,7 @@ const QrCode = () => {
           )}
         </div>
       </motion.form>
+
       <motion.div
         hidden={!QrClick}
         variants={boxVariants.FormBoxVariant}
